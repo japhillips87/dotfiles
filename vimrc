@@ -5,14 +5,16 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-cucumber.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'kchmck/vim-coffee-script.git'
-Bundle 'scroosoose/syntastic.git'
+Bundle 'vim-fugitive'
+Bundle 'vim-easymotion'
+Bundle 'vim-rails'
+Bundle 'vim-cucumber'
+Bundle 'vim-endwise'
+Bundle 'nerdtree'
+Bundle 'vim-coffee-script'
+Bundle 'syntastic'
+Bundle 'ctrlp.vim'
+Bundle 'supertab'
 
 syntax on
 filetype plugin indent on
@@ -39,9 +41,8 @@ map <leader>ro :Robserver<CR>
 map <leader>rv :Rview<CR>
 map <leader>rl :Rlocale<CR>
 
-set visualbell
 set wildmenu
-set wildmode=list:longest,full
+set wildmode=list,longest,full
 set splitright
 set splitbelow
 set cindent
