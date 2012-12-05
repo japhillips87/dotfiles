@@ -24,7 +24,7 @@ set laststatus=2
 set encoding=utf-8
 
 map <leader>ff :CtrlP<CR>
-map <leader>fb :CtrlBuffer<CR>
+map <leader>fb :CtrlPBuffer<CR>
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
