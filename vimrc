@@ -15,6 +15,7 @@ Bundle 'vim-coffee-script'
 Bundle 'syntastic'
 Bundle 'ctrlp.vim'
 Bundle 'supertab'
+Bundle 'vim-jst'
 
 syntax on
 filetype plugin indent on
@@ -59,6 +60,8 @@ set hlsearch
 set incsearch
 set noswapfile
 set nobackup
+set noeb vb t_vb=
+au GUIEnter * set vb t_vb=
 
 colorscheme JoshsAwesomeColors
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
