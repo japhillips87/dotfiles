@@ -11,9 +11,8 @@ alias h='history'
 alias be='bundle exec'
 alias gmim='mvim'
 alias pairme='sh ~/User\ Scripts/pair_me_up.sh'
-alias tmux='tmuxinator start corndog'
 alias bec='bundle exec cucumber'
-alias ber='bundle exec rspec' 
+alias ber='bundle exec rspec'
 alias unhitch='hitch -u'
 alias jaz="phantomjs spec/javascripts/runner.coffee http://localhost:5555/jasmine | grep -h -B3 -A1 '\(failures\|\"passed\": false\|messages\)'"
 alias zcu="zeus cucumber"
@@ -21,4 +20,6 @@ alias zr="zeus test"
 alias zc="zeus console"
 alias zs="zeus server"
 alias zr="zeus rake"
+alias :q="exit"
+alias tac='tail -r'
 growl() { growlnotify -n 'Terminal' -m $1; }
