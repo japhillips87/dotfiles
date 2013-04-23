@@ -6,13 +6,13 @@ endif
 
 let colors_name = "JoshsAwesomeColors"
 
-hi Cursor                         guifg=Black      guibg=Cyan
-hi Normal      ctermfg=Cyan       guifg=White      guibg=#242424      ctermbg=DarkGrey
+hi Cursor      ctermfg=Black      guifg=Black      guibg=Cyan         ctermbg=Cyan
+hi Normal      ctermfg=White      guifg=White      guibg=#242424      ctermbg=Black
 hi Visual                         guifg=White      guibg=Blue         gui=NONE
 
-hi Comment     ctermfg=Green      guifg=Green   
+hi Comment     ctermfg=Green      guifg=Green
 hi Constant    ctermfg=Red        guifg=Red
-hi Special     ctermfg=Green      guifg=Green   
+hi Special     ctermfg=Green      guifg=Green
 hi Identifier  ctermfg=Cyan       guifg=Cyan
 hi Statement   ctermfg=DarkRed    guifg=#FF6600                       gui=NONE
 hi PreProc     ctermfg=Yellow     guifg=Yellow
@@ -20,7 +20,7 @@ hi Type        ctermfg=Red        guifg=Red                           gui=NONE
 hi Ignore      ctermfg=DarkGrey   guifg=DarkGrey
 hi LineNr      ctermfg=DarkGrey   guifg=DarkGrey
 
-hi rubySymbol            ctermfg=Red        guifg=Red
+hi rubySymbol            ctermfg=Cyan       guifg=Cyan
 hi rubyInstanceVariable  ctermfg=Cyan       guifg=Cyan
 hi rubyClassVariable     ctermfg=Cyan       guifg=Cyan
 
