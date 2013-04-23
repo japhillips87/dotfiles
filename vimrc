@@ -16,6 +16,9 @@ Bundle 'syntastic'
 Bundle 'ctrlp.vim'
 Bundle 'supertab'
 Bundle 'vim-jst'
+Bundle 'Align'
+Bundle 'vim-indent-guides'
+Bundle 'ag.vim'
 
 syntax on
 filetype plugin indent on
@@ -26,6 +29,7 @@ set encoding=utf-8
 
 map <leader>ff :CtrlP<CR>
 map <leader>fb :CtrlPBuffer<CR>
+map <leader>a  :Ag<space>
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
@@ -41,9 +45,10 @@ map <leader>rf :Rfunctionaltest<CR>
 map <leader>ro :Robserver<CR>
 map <leader>rv :Rview<CR>
 map <leader>rl :Rlocale<CR>
+map <Leader>ct :!ctags -R .<CR>
 
 set wildmenu
-set wildmode=list,longest,full
+set wildmode=list:longest
 set splitright
 set splitbelow
 set cindent
@@ -62,6 +67,10 @@ set noswapfile
 set nobackup
 set noeb vb t_vb=
 au GUIEnter * set vb t_vb=
+au VimEnter * IndentGuidesEnable
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 colorscheme JoshsAwesomeColors
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
@@ -77,6 +86,11 @@ augroup vimrc
 autocmd!
 autocmd GuiEnter * set columns=120 lines=70 number
 augroup END
+
+autocmd BufRead,BufNewFile *.jst set filetype=javascript
+autocmd BufRead,BufNewFile *.ebf,*.ctl set filetype=ruby
+autocmd BufRead,BufNewFile *.rabl set filetype=ruby
+autocmd BufWritePre * :%s/\s\+$//e
 
 if filereadable(expand('~/.vimrc.local'))
   source ~/.vimrc.local
