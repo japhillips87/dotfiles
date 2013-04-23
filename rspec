@@ -1,0 +1,6 @@
+--color
+--order default
+--format documentation
+-t ~api_integration
+-t ~integration
+-t ~quarantine
