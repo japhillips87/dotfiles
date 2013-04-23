@@ -19,6 +19,7 @@ Bundle 'vim-jst'
 Bundle 'Align'
 Bundle 'vim-indent-guides'
 Bundle 'ag.vim'
+Bundle 'vim-powerline'
 
 syntax on
 filetype plugin indent on
