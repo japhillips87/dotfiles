@@ -23,6 +23,8 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 PS1='\[\e[0;91m\]\u\[\e[m\] \[\e[0;92m\]\w\[\e[m\]\[\e[0;93m\]$(__git_ps1)\[\033[00m\] \[\e[0;96m\]\$ \[\e[m\]\[\e[0;97m\]'
 
+PROMPT_COMMAND='echo -ne "\033]0; ${PWD##*/}\007"'
+
 export PATH=$HOME/bin:$HOME/xbin:$PATH:$HOME/phantomjs/bin:$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin
 
 # searches for given string in filenames in current and all subdirectories
@@ -40,3 +42,5 @@ if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_aut
 }
 # Uncomment to persist pair info between terminal instances
 # hitch
+
+update_terminal_cwd

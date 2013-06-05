@@ -24,10 +24,6 @@ Bundle 'vim-powerline'
 syntax on
 filetype plugin indent on
 
-set nocompatible
-set laststatus=2
-set encoding=utf-8
-
 map <leader>ff :CtrlP<CR>
 map <leader>fb :CtrlPBuffer<CR>
 map <leader>a  :Ag<space>
@@ -48,6 +44,9 @@ map <leader>rv :Rview<CR>
 map <leader>rl :Rlocale<CR>
 map <Leader>ct :!ctags -R .<CR>
 
+set nocompatible
+set laststatus=2
+set encoding=utf-8
 set wildmenu
 set wildmode=list:longest
 set splitright
@@ -67,6 +66,7 @@ set incsearch
 set noswapfile
 set nobackup
 set noeb vb t_vb=
+set so=5
 au GUIEnter * set vb t_vb=
 au VimEnter * IndentGuidesEnable
 let g:indent_guides_enable_on_vim_startup = 1
