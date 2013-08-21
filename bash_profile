@@ -40,7 +40,4 @@ hitch() {
 command hitch "$@"
 if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
 }
-# Uncomment to persist pair info between terminal instances
-# hitch
-
-update_terminal_cwd
+hitch
