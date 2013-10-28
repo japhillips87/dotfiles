@@ -67,6 +67,9 @@ set noswapfile
 set nobackup
 set noeb vb t_vb=
 set so=5
+set foldmethod=syntax
+set foldminlines=3
+set foldlevel=100
 au GUIEnter * set vb t_vb=
 au VimEnter * IndentGuidesEnable
 au FocusLost * silent! :wa
