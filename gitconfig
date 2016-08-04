@@ -65,10 +65,11 @@
   trustExitCode = true
 
 [push]
-	default = current
+	default = upstream
 
 [pull]
 	default = current
+	rebase = true
 
 [merge]
 	default = current
@@ -101,5 +102,5 @@
 	cmd = /Applications/More/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = Josh Phillips
-	email = japhillips87@gmail.com
+	name = Josh
+	email = Joshua.Phillips@phishme.com

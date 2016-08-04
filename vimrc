@@ -1,29 +1,31 @@
 " let g:no_turbux_mappings = 1
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'vim-fugitive'
-Bundle 'vim-easymotion'
-Bundle 'vim-rails'
-Bundle 'vim-cucumber'
-Bundle 'vim-endwise'
-Bundle 'nerdtree'
-Bundle 'vim-coffee-script'
-Bundle 'syntastic'
-Bundle 'ctrlp.vim'
-Bundle 'supertab'
-Bundle 'vim-jst'
-Bundle 'Align'
-Bundle 'vim-indent-guides'
-Bundle 'ag.vim'
-Bundle 'vim-powerline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-cucumber'
+Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ervandew/supertab'
+Plugin 'briancollins/vim-jst'
+Plugin 'vim-scripts/Align'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'rking/ag.vim'
+Plugin 'powerline/powerline'
 
-syntax on
-filetype plugin indent on
-
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 map <leader>ff :CtrlP<CR>
 map <leader>fb :CtrlPBuffer<CR>
 map <leader>a  :Ag<space>
@@ -44,7 +46,6 @@ map <leader>rv :Rview<CR>
 map <leader>rl :Rlocale<CR>
 map <Leader>ct :!ctags -R .<CR>
 
-set nocompatible
 set laststatus=2
 set encoding=utf-8
 set wildmenu
@@ -59,7 +60,6 @@ set tabstop=2
 set shiftwidth=2
 set hidden
 set number
-set fu
 set ic
 set hlsearch
 set incsearch
@@ -78,7 +78,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
 colorscheme JoshsAwesomeColors
-set guifont=Source\ Code\ Pro\ for\ Powerline:h14
+set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 let g:Powerline_symbols = 'fancy'
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=bash
