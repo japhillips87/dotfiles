@@ -20,3 +20,9 @@ ln -s dotfiles/screenrc .screenrc
 ln -s dotfiles/tmux.conf .tmux.conf
 ln -s dotfiles/tmuxinator .tmuxinator
 ln -s dotfiles/vimrc .vimrc
+
+echo "Cloning Vundle"
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+echo "Installing VIM Plugins"
+vim +PluginInstall +qall
