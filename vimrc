@@ -70,6 +70,9 @@ set so=5
 set foldmethod=syntax
 set foldminlines=3
 set foldlevel=100
+set backspace=indent,eol,start
+set autoread
+cnoreabbrev W w
 au GUIEnter * set vb t_vb=
 au VimEnter * IndentGuidesEnable
 au FocusLost * silent! :wa
@@ -77,7 +80,10 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
-colorscheme JoshsAwesomeColors
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 let g:Powerline_symbols = 'fancy'
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r

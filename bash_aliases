@@ -1,6 +1,5 @@
 #!/bin/bash
-alias cde='cd ~/Projects/Corndog'
-alias etl='cd ~/Projects/cde-etl'
+alias mgmt='cd ~/mgmt'
 alias gs='git status'
 alias gc='git checkout'
 alias gb='git branch'
@@ -8,6 +7,7 @@ alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %
 alias gpr='git pull --rebase'
 alias gphm='git push heroku master'
 alias gp='git push'
+alias gdc='git diff --cached'
 alias h='history'
 alias be='bundle exec'
 alias gmim='mvim'

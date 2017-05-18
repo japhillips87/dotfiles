@@ -42,8 +42,5 @@ export EDITOR=/usr/local/bin/mvim
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-hitch() {
-command hitch "$@"
-if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-hitch
+
+ssh-add -K > /dev/null 2>&1
