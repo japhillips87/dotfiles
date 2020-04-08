@@ -65,7 +65,7 @@
   trustExitCode = true
 
 [push]
-	default = upstream
+	default = current
 
 [pull]
 	default = current
@@ -103,4 +103,4 @@
 	trustExitCode = true
 [user]
 	name = Josh
-	email = Joshua.Phillips@phishme.com
+	email = japhillps87@gmail.com
