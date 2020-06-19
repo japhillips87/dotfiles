@@ -34,5 +34,9 @@ eval "$(rbenv init -)"
 # Load Git completion
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
+CASE_SENSITIVE="false"
 
 autoload -Uz compinit && compinit
+
+# delete this if non-linux install
+synergys
