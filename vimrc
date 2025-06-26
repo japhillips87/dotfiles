@@ -2,29 +2,46 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" --- Vim-Plug Setup ---
+" This section handles Vim-Plug's self-installation.
+" It checks if Vim-Plug is already installed and, if not, downloads it.
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins
+" This is where Vim-Plug will install all your plugins.
+" It defaults to ~/.vim/plugged, but explicitly setting it is good practice.
+call plug#begin('~/.vim/plugged')
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-endwise'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
-Plugin 'briancollins/vim-jst'
-Plugin 'vim-scripts/Align'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'rking/ag.vim'
-Plugin 'powerline/powerline'
+" --- Your Plugins (Converted from Vundle to Vim-Plug) ---
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+" Vim-Plug itself (managed like any other plugin)
+Plug 'junegunn/vim-plug'
+
+" Your plugins: 'Plugin' becomes 'Plug'
+Plug 'tpope/vim-fugitive'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-endwise'
+Plug 'scrooloose/nerdtree'
+Plug 'kchmck/vim-coffee-script'
+Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim'
+Plug 'ervandew/supertab'
+Plug 'briancollins/vim-jst'
+Plug 'vim-scripts/Align'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'rking/ag.vim'
+Plug 'powerline/powerline'
+
+" --- End Plugin List ---
+
+" Initialize plugin system
+call plug#end()
+
 filetype plugin indent on    " required
 map <leader>ff :CtrlP<CR>
 map <leader>fb :CtrlPBuffer<CR>
