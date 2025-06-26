@@ -9,7 +9,7 @@ if [ -f /opt/local/etc/bash_completion ]; then
     . /opt/local/etc/bash_completion
 fi
 
-export PATH=$HOME.rbenv/shims:/usr/local/bin:/usr/local/opt/mysql@5.6/bin:$PATH
+export PATH=$HOME/usr/local/bin:/usr/local/opt/mysql@5.6/bin:$PATH
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -29,14 +29,11 @@ else
   export EDITOR='code'
 fi
 
-eval "$(rbenv init -)"
-
 # Load Git completion
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 CASE_SENSITIVE="false"
 
-autoload -Uz compinit && compinit
-
-# delete this if non-linux install
-synergys
+# asdf-vm setup
+. "$HOME/.asdf/asdf.sh"
+autoload -Uz compinit && compinit -D
